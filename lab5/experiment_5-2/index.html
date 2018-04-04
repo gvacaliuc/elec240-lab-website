@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Signal Acquisition - ELEC 240 Labs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Signal Acquisition";
+    var mkdocs_page_input_path = "lab5/experiment_5-2.md";
+    var mkdocs_page_url = "/lab5/experiment_5-2/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ELEC 240 Labs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab Home</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab-report/">Your Lab Report</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../tools-and-resources/">Tools and Resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../virtualbench/">VirtualBench</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">References</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../references/patch-cords-and-cables/">Patch Cords and Cables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../references/breadboard/">The Breadboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../references/interface/">The Interface Modules</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../references/wiring/">Wiring</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../references/color_code/">Resistor Color Code</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 1</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab1/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/safety/">Safety</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/background/">Background</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/experiment_1-1/">DC Measurements: the DMM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/plotting-help/">Plotting Data in Matlab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/interlude/">Grounds and Grounding</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/experiment_1-2/">The Oscilloscope and Function Generator</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab1/postlude/">Cleaning Up</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 2</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab2/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/background/">Background</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/before-you-begin/">Before You Begin</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/experiment_2-1/">Electroacoustic Transducers I</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/breadboard/">The Breadboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/experiment_2-2/">Electroacoustic Transducers II</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab2/experiment_2-3/">Optoelectronic Signal Sources and Sinks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 3</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab3/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab3/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab3/experiment_3-1/">Resistive Voltage Dividers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab3/interlude/">Measuring the Transfer Function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab3/experiment_3-2/">Filters and Transfer Function</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 4</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab4/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/before-lab/">Before Lab</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/organizing-your-breadboard/">Organizing Your Breadboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/experiment_4-1/">The 741 Op-Amp</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/experiment_4-2/">The Inverting Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/standard-signal-levels/">Standard Signal Levels</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab4/experiment_4-3/">Transducer Amplifiers</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 5</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../prelude/">Prelude</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../experiment_5-1/">Virtual Instruments with Labview</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Signal Acquisition</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#experiment-52">Experiment 5.2</a></li>
+    
+
+    <li class="toctree-l3"><a href="#signal-acquisition">Signal Acquisition</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#equipment">Equipment</a></li>
+        
+            <li><a class="toctree-l4" href="#part-a-acquiring-signals">Part A: Acquiring Signals</a></li>
+        
+            <li><a class="toctree-l4" href="#part-b-the-spectrum-of-triangle-and-square-waves">Part B: The Spectrum of Triangle and Square Waves</a></li>
+        
+            <li><a class="toctree-l4" href="#part-c-the-spectrum-and-frequency-response">Part C: The Spectrum and Frequency Response</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../experiment_5-3/">The Spectrum of Acoustic Signals</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 6</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab6/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab6/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab6/experiment_6-1/">Sampling and Quantization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab6/experiment_6-2/">Recording a Reference Signal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab6/experiment_6-3/">Signal Processing in Matlab</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 7</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab7/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab7/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab7/experiment_7-1/">Digital Logic</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Lab 8</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../lab8/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab8/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab8/soldering/">Building a Velleman Kit</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab8/report/">Report</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../lab8/sign-off-sheet/">Sign Off Sheet</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Final Lab</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../final-lab/">Home</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../final-lab/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../final-lab/project-specification/">Project Specification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../final-lab/deliverables/">Deliverables</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Miscellanous Images</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc_images/">Home</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ELEC 240 Labs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Lab 5 &raquo;</li>
+        
+      
+    
+    <li>Signal Acquisition</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>ELEC 240 Lab</p>
+<hr />
+<h2 id="experiment-52">Experiment 5.2</h2>
+<h2 id="signal-acquisition">Signal Acquisition</h2>
+<h3 id="_1"></h3>
+<h3 id="equipment">Equipment</h3>
+<ul>
+<li>Test board</li>
+<li>2.2 <span><span class="MathJax_Preview">k\Omega</span><script type="math/tex">k\Omega</script></span> Resistor</li>
+<li>0.33 <span><span class="MathJax_Preview">\mu F</span><script type="math/tex">\mu F</script></span> Capacitor</li>
+</ul>
+<h3 id="part-a-acquiring-signals">Part A: Acquiring Signals</h3>
+<p>In this section you will learn how to acquire a signal into Labview using the
+Data Acquisition (DAQ) card (inside your PC) via the DAQ cable that is
+connected to your lab PC:</p>
+<p><center>
+<img alt="" src="../figs/daq.jpg" />
+</center></p>
+<ol>
+<li>
+<p>Copy the VI you created from Experiment 5.1 and give it a new name.</p>
+</li>
+<li>
+<p>We want to modify the Block Diagram to process an external signal read via
+    the DAQ cable. Delete the generated waveforms, i.e., Sine Wave and White
+    Noise blocks, Add block, and Frequency and Amplitude controls.</p>
+<p><center>
+<img alt="" src="../figs/bd6.png" />
+</center></p>
+</li>
+<li>
+<p>In the Functions palette, go to Programming <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> Measurement I/O
+    <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> NI DAQmx <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> DAQAssist.</p>
+</li>
+<li>
+<p>Select Acquire Signals <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> Analog Input <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> Voltage.</p>
+</li>
+<li>
+<p>Select the input channel we will connect our FGEN signal to, in this case,
+    A/D input 4, or ai4.</p>
+</li>
+<li>
+<p>At the bottom of the DAQ Assistant window that pops up, change the
+    Acquisition Mode to Continuous Samples and select OK.</p>
+</li>
+<li>
+<p>In the Block Diagram window, connect the data output to the broken wire
+    from the Power Spectrum block. Create controls for the input pins <code>number
+    of samples</code> and <code>rate</code>.</p>
+<p><center>
+<img alt="" src="../figs/bd7.png" />
+</center></p>
+</li>
+<li>
+<p>Your VI is ready to acquire signals from your test board. <strong>Show a
+    screenshot of your VI.</strong> Connect the DAQ cable to J3-1 on your test board.</p>
+</li>
+<li>
+<p>Connect the output of the FGEN to CH1 of the oscilloscope and to A/D input
+    4 (pin 46).</p>
+</li>
+<li>
+<p>Set the FGEN to produce a <span><span class="MathJax_Preview">2 V_{ pp }</span><script type="math/tex">2 V_{ pp }</script></span>, 500 Hz sine wave.</p>
+</li>
+<li>
+<p>In the Front Panel, set the rate to 10k and number of samples to 5k. </p>
+</li>
+<li>
+<p>Right-click on the time-domain waveform's x-axis to uncheck Autoscale X.
+    Change the max value of the time scale by double-clicking the max number so
+    that roughly 2-3 periods are displayed.</p>
+</li>
+<li>
+<p>Change the max frequency in the power spectrum plot as well to a reasonable
+    viewing window.</p>
+</li>
+<li>
+<p>Run your VI and <strong>take a screenshot.</strong></p>
+</li>
+<li>
+<p>Add some additional information to your Front Panel, RMS voltage (called
+    the Average DC/RMS block), and peak-to-peak voltage, and any other
+    interesting info you might find in Labview built-ins (if you can't find
+    these function blocks, use the Search feature). <strong>Show a screenshot.</strong></p>
+</li>
+<li>
+<p><strong>How does the display look when you disconnect the FGEN? Does your VI
+    detect any noise?</strong></p>
+</li>
+</ol>
+<h3 id="part-b-the-spectrum-of-triangle-and-square-waves">Part B: The Spectrum of Triangle and Square Waves</h3>
+<ol>
+<li>
+<p>The Fourier series of a triangle wave has only odd harmonics, which fall
+    off at the rate of <span><span class="MathJax_Preview">\frac{1}{n}2T</span><script type="math/tex">\frac{1}{n}2T</script></span> (12 dB/octave). Turn dB option on for your
+    spectral plot for better viewing. Set the function generator to produce a
+    triangle wave and see if this is the case. <strong>What happens when you vary the
+    symmetry?</strong></p>
+</li>
+<li>
+<p>The square wave also consists only of odd harmonics, but falling off as
+    <span><span class="MathJax_Preview">\frac{1}{n}T</span><script type="math/tex">\frac{1}{n}T</script></span> (6 dB/octave). Set the function generator to square wave and
+    <strong>comment on the spectrum.</strong> Vary duty cycle. <strong>What do you observe?</strong>
+    Depending on the exact frequency you may see a number of extraneous
+    harmonics. These are due to the phenomenon of <em>aliasing</em> which we will
+    examine later.</p>
+</li>
+<li>
+<p>Your spectrum analyzer displays magnitude and frequency on a linear scale.
+    It is sometimes useful to view the spectrum on a semi-log or log-log plot.
+    Stop executing the program, right-click on the spectrum display (gray area)
+    and click on Properties <span><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> Scales. Select Log. Adjust the
+    amplitude if necessary to obtain a good display. <strong>Do you notice the
+    hyperbolic shape in which the harmonics fall off?</strong></p>
+</li>
+<li>
+<p>Now get a log-log plot with magnitude in dB by changing the Y-scale to Log
+    and setting a multiplier of 20 (under Scale Factors). <strong>Note that the <span><span class="MathJax_Preview">1/f</span><script type="math/tex">1/f</script></span>
+    fall off is now a "linear" 20 dB/decade slope.</strong></p>
+</li>
+<li>
+<p>Switch the function generator to a triangle wave. <strong>Is the slope now 40
+    dB/decade?</strong> Set the spectrum analyzer back to linear display (both 
+    magnitude and frequency). Note the shape of the spectrum.</p>
+</li>
+<li>
+<p>Set the function generator to square wave. Set the Duty Cycle to 15%. You
+    should now have a waveform consisting of narrow pulses. Note the shape of
+    the spectrum. It should have the <span><span class="MathJax_Preview">sin(x)/x</span><script type="math/tex">sin(x)/x</script></span> (sinc) shape you saw in
+    ELEC241.</p>
+</li>
+<li>
+<p>Set the spectrum analyzer back to dB magnitude and log frequency. Set the
+    duty cycle to 50%.</p>
+</li>
+</ol>
+<h3 id="part-c-the-spectrum-and-frequency-response">Part C: The Spectrum and Frequency Response</h3>
+<ol>
+<li>
+<p>Wire the circuit below. This is the same circuit we used in Lab 3, so you
+    should have its transfer function in your lab report.</p>
+<p><center>
+<img alt="" src="../figs/img181.png" />
+</center></p>
+</li>
+<li>
+<p>Connect the output of the function generator to <span><span class="MathJax_Preview">v_{in}</span><script type="math/tex">v_{in}</script></span>. Also connect
+   CH1 of the scope and A/D input 4 (pin 46) to <span><span class="MathJax_Preview">v_{in}</span><script type="math/tex">v_{in}</script></span>.</p>
+</li>
+<li>
+<p>Set the function generator to produce a 50 Hz sine wave at 1 <span><span class="MathJax_Preview">V_{rms}</span><script type="math/tex">V_{rms}</script></span>.</p>
+</li>
+<li>
+<p>Move CH1 of the scope and A/D input 4 to <span><span class="MathJax_Preview">v_{out}</span><script type="math/tex">v_{out}</script></span>.</p>
+</li>
+<li>
+<p>Increase the frequency of the function generator and observe the behavior
+    of the spectrum display. The tip of the peak corresponding to the
+    fundamental of the sine wave will trace out the magnitude of the transfer
+    function of our circuit.</p>
+</li>
+<li>
+<p>Since the transfer function falls off as <span><span class="MathJax_Preview">1/f</span><script type="math/tex">1/f</script></span> for high frequencies, we
+   expect the output to fall 6dB/octave (an octave is a factor of two) for
+   frequencies well above the cutoff frequency T. <strong>Check the response at 1
+   kHz, 2 kHz, and 4 kHz and see how well this holds.</strong></p>
+</li>
+<li>
+<p>Turn off the function generator.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../experiment_5-3/" class="btn btn-neutral float-right" title="The Spectrum of Acoustic Signals">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../experiment_5-1/" class="btn btn-neutral" title="Virtual Instruments with Labview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../experiment_5-1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../experiment_5-3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../mathjax-config.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
